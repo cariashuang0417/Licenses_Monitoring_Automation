@@ -72,6 +72,11 @@ def get_license_status(gis):
 
 
 def send_report_email(license_status):
+    """
+    summarize license status as a string message,
+    send message through SMTP server, and then the email to subscribers
+    """
+
     license_summary = "\r\n".join([f"{i[0]}: {'Requires Attention' if i[1] else 'Valid'}" for i in license_status.items()])
     message = f"""
 ArcGIS Licenses Report:
