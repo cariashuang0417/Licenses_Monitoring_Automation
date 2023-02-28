@@ -138,7 +138,7 @@ def get_main_args():
         url, username, password = args
         if not url.startswith('http'): raise ValueError('first parameter must be Url')
     except ValueError:
-        print('Usage: python app.py <url> <username> <password>')
+        print('Usage: python monitor_server_licenses.py <url> <username> <password>')
         print('Please pass url, username, password as ordered args')
         sys.exit(1)
     return args
